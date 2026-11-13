@@ -135,6 +135,20 @@
         <!-- The mugs are drawn here by JavaScript (renderProducts) -->
         <!-- Moving picture strip (drawn by JavaScript, see renderShowcase) -->
         <div id="showcase" class="hidden mb-14 lg:mb-20"></div>
+        <!-- Create Your Own Design promo video (between the picture strip and the first mug) -->
+        <section id="designPromo" class="hidden mb-14 lg:mb-20 rounded-3xl overflow-hidden bg-gradient-to-br from-green-900 via-green-800 to-red-800 text-white shadow-2xl">
+            <div class="grid lg:grid-cols-2 gap-0 items-center">
+                <div class="p-8 sm:p-12 space-y-5 text-center lg:text-left">
+                    <span class="inline-block text-xs font-extrabold uppercase tracking-widest bg-white text-red-700 px-4 py-1.5 rounded-full">🎁 Christmas Gift Idea</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" style="font-family:'Mountains of Christmas','Plus Jakarta Sans',cursive">The Perfect Personal Christmas Gift</h2>
+                    <p class="text-green-50 text-base sm:text-lg">Upload your favorite photos, move and resize them, pick your mug color, and create a one-of-a-kind mug in minutes. Made by you, loved by them.</p>
+                    <button onclick="openDesigner()" class="px-7 py-4 rounded-2xl bg-white text-red-700 hover:bg-red-50 text-base font-extrabold shadow-xl transition-all">🎨 Create Your Own Design</button>
+                </div>
+                <div class="bg-black/20">
+                    <video id="designPromoVideo" class="w-full block" src="media/create-your-design.mp4" poster="media/create-your-design-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Short video showing how to create your own mug design"></video>
+                </div>
+            </div>
+        </section>
         <div id="productsContainer" class="space-y-20 lg:space-y-28"></div>
     </main>
 
@@ -3186,6 +3200,7 @@
         function updateDesignerButton() {
             const b = document.getElementById('designHeaderBtn');
             if (b) b.classList.toggle('hidden', !designerEnabled());
+            const dp = document.getElementById('designPromo'); if (dp) dp.classList.toggle('hidden', !designerEnabled());
         }
         function openDesigner() {
             if (!designerEnabled()) return;
