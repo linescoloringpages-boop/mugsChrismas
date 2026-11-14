@@ -97,6 +97,16 @@
         #xmasSnow { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 30; }
         @media (prefers-reduced-motion: reduce) { .xmas-lights i { animation: none; } }
     </style>
+
+    <style id="xmasBg">
+        main, #shop, section, footer { position: relative; z-index: 1; }
+        #xmasBg { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+        #xmasBgWires { position: absolute; inset: 0; width: 100%; height: 100%; }
+        #xmasTree { position: absolute; right: 1vw; bottom: -2vh; height: 88vh; width: auto; max-width: 70vw; }
+        .xb { animation: xmasTwinkle 2.2s ease-in-out infinite; }
+        @media (max-width: 640px) { #xmasTree { height: 62vh; right: -6vw; } }
+        @media (prefers-reduced-motion: reduce) { .xb { animation: none; } }
+    </style>
 </head>
 <body class="bg-white text-gray-900 min-h-screen settings-loading">
 <script>setTimeout(function(){document.body.classList.remove("settings-loading");},4000);</script>
@@ -111,7 +121,7 @@
     <header class="border-b border-gray-100 sticky top-0 bg-white/90 backdrop-blur-md z-40">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <span id="txt_brandName" class="text-2xl font-extrabold tracking-tight text-gray-900">Roots<span class="text-red-600">AndPride</span></span>
+                <span id="txt_brandName" class="text-2xl font-extrabold tracking-tight text-gray-900">Christmas <span class="text-red-600">Store</span></span>
             </div>
             <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-600">
                 <a href="#shop" class="hover:text-red-600 transition-colors">Shop</a>
@@ -133,6 +143,12 @@
     <!-- Main Hero Section -->
     <main id="shop" class="max-w-7xl mx-auto px-6 py-10 sm:py-16 lg:py-20">
         <!-- The mugs are drawn here by JavaScript (renderProducts) -->
+        <!-- Christmas sale banner (text is filled from the white-mug promo settings by updateXmasBanner) -->
+        <div id="xmasSaleBanner" class="mb-10 lg:mb-14 rounded-3xl bg-gradient-to-r from-red-700 via-red-600 to-green-700 text-white shadow-xl border-4 border-white/70 px-6 py-6 sm:py-7 text-center relative overflow-hidden">
+            <div class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-red-100">🎄 Christmas Sale 🎄</div>
+            <div id="xmasSaleTitle" class="text-3xl sm:text-5xl font-extrabold mt-1" style="font-family:'Mountains of Christmas','Plus Jakarta Sans',cursive">50% OFF All White Mugs</div>
+            <p id="xmasSaleText" class="mt-2 text-sm sm:text-lg font-semibold text-red-50">Our Christmas gift to you: buy 2 or more white mugs and save 50%.</p>
+        </div>
         <!-- Moving picture strip (drawn by JavaScript, see renderShowcase) -->
         <div id="showcase" class="hidden mb-14 lg:mb-20"></div>
         <!-- Create Your Own Design promo video (between the picture strip and the first mug) -->
@@ -263,7 +279,7 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <span class="text-xl font-extrabold tracking-tight">Roots<span class="text-red-400">AndPride</span></span>
+            <span class="text-xl font-extrabold tracking-tight">Christmas <span class="text-red-400">Store</span></span>
             <div id="contact" class="text-center sm:text-left">
                 <p class="text-[11px] font-bold uppercase tracking-wider text-gray-500">Contact us</p>
                 <a id="contactEmailLink" href="mailto:" class="text-sm font-bold text-white hover:text-red-300 underline break-all"></a>
@@ -1309,13 +1325,13 @@
     <!-- Core Store Script -->
     <script>
         const defaultTexts = {
-            announcement: "🎄 Merry Christmas! Free Worldwide Shipping on Orders Over $50 | Order early for holiday delivery 🎁",
+            announcement: "🎄 Christmas Sale: 50% OFF all white mugs, our gift to you! | Free Worldwide Shipping on Orders Over $50 🎁",
             statementTag: "Holiday Magic",
             statementTitle: "More Than a Mug. A Christmas Memory.",
             statementDesc: "Every Christmas Store mug is a little piece of holiday joy: warm drinks, family traditions and the people you love, in your hands every morning.",
             statementQuoteHe: '🎄 ✨ 🎁',
             statementQuoteEn: '"Wishing you a season of warmth, light and joy"',
-            brandName: 'Roots<span class="text-red-600">AndPride</span>',
+            brandName: 'Christmas <span class="text-red-600">Store</span>',
             badge: "Holiday Edition",
             productTitle: "Christmas Mug",
             oldPrice: "$29.99",
@@ -2191,8 +2207,21 @@
             renderProductSection(i);
         }
 
+        function updateXmasBanner() {
+            try {
+                const w = (storeState && storeState.whitePromo) || { percent: 50, singlePrice: 14.99 };
+                const pct = Number(w.percent) || 50;
+                const sp = Number(w.singlePrice) > 0 ? Number(w.singlePrice) : 14.99;
+                const pctTxt = (Math.round(pct) === pct ? String(pct) : pct.toFixed(1));
+                const el = document.getElementById('xmasSaleTitle');
+                if (el) el.textContent = pctTxt + '% OFF All White Mugs';
+                const tx = document.getElementById('xmasSaleText');
+                if (tx) tx.textContent = 'Our Christmas gift to you: buy 2 or more white mugs and save ' + pctTxt + '%. A single white mug is just $' + sp.toFixed(2) + '.';
+            } catch (e) { /* ignore */ }
+        }
         function initStore() {
             storeState = getStoreState();
+            updateXmasBanner();
 
             const t = storeState.texts;
             document.getElementById('txt_announcement').innerHTML = t.announcement;
@@ -6754,6 +6783,70 @@
         x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill();}
       requestAnimationFrame(tick);
     })();
+  }catch(e){}
+})();
+</script>
+
+<div id="xmasBg" aria-hidden="true">
+  <svg id="xmasBgWires" xmlns="http://www.w3.org/2000/svg"></svg>
+  <svg id="xmasTree" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet"></svg>
+</div>
+<script>
+(function(){
+  try{
+    var NS='http://www.w3.org/2000/svg', COL=['#ef4444','#22c55e','#facc15','#3b82f6','#f472b6','#fb923c'];
+    function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e;}
+    // ---- Christmas tree (drawn once) ----
+    var T=document.getElementById('xmasTree');
+    var defs=el('defs',{},T);var g=el('linearGradient',{id:'xtg',x1:'0',y1:'0',x2:'0',y2:'1'},defs);
+    el('stop',{offset:'0','stop-color':'#22c55e'},g);el('stop',{offset:'1','stop-color':'#14532d'},g);
+    var body=el('g',{opacity:'.42'},T);
+    el('rect',{x:'180',y:'530',width:'40',height:'60',fill:'#7c4a1e'},body);
+    var tiers=[[200,70,150,230],[200,160,100,340],[200,270,60,450],[200,380,20,540]];
+    // triangles: apex(200, y) with base half-width
+    var tri=[[200,60,95,200],[200,150,130,310],[200,250,165,420],[200,350,195,535]];
+    tri.forEach(function(t){el('polygon',{points:t[0]+','+t[1]+' '+(t[0]-t[2])+','+t[3]+' '+(t[0]+t[2])+','+t[3],fill:'url(#xtg)'},body);});
+    var st=el('g',{opacity:'.9'},T);
+    el('polygon',{points:'200,18 208,42 234,42 213,57 221,82 200,67 179,82 187,57 166,42 192,42',fill:'#facc15'},st);
+    // lights placed inside the tree shape
+    var lg=el('g',{},T), seed=7;
+    function rnd(){seed=(seed*9301+49297)%233280;return seed/233280;}
+    var n=0;
+    for(var i=0;i<46;i++){
+      var y=95+rnd()*430;
+      // half width of the tree at height y
+      var hw=0;tri.forEach(function(t){if(y>=t[1]&&y<=t[3]){var w=t[2]*(y-t[1])/(t[3]-t[1]);if(w>hw)hw=w;}});
+      if(hw<12)continue;
+      var x=200+(rnd()*2-1)*(hw-8);
+      var c=COL[n%COL.length];n++;
+      var b=el('circle',{cx:x.toFixed(1),cy:y.toFixed(1),r:'6.5',fill:c,'class':'xb'},lg);
+      b.style.animationDelay=((n*0.37)%2.2).toFixed(2)+'s';
+      b.style.filter='drop-shadow(0 0 5px '+c+')';
+    }
+    // ---- sparse LED string lights across the page ----
+    var W=document.getElementById('xmasBgWires');
+    function draw(){
+      while(W.firstChild)W.removeChild(W.firstChild);
+      var w=innerWidth,h=innerHeight, bi=0;
+      // three wires (top, middle, lower) with a gentle sag, bulbs far apart
+      [[0.14,0.05,60],[0.46,-0.04,70],[0.80,0.05,60]].forEach(function(cfg,wi){
+        var y0=h*cfg[0],sag=cfg[2]*(cfg[1]>0?1:-1);
+        var y1=y0+(wi%2?-18:12);
+        var d='M -10 '+y0+' Q '+(w/2)+' '+(y0+sag*2)+' '+(w+10)+' '+y1;
+        el('path',{d:d,fill:'none',stroke:'#14532d','stroke-width':'2','stroke-opacity':'.55'},W);
+        var count=Math.max(4,Math.round(w/230));
+        for(var k=1;k<count;k++){
+          var tt=k/count,x=-10+(w+20)*tt;
+          var y=(1-tt)*(1-tt)*y0+2*(1-tt)*tt*(y0+sag*2)+tt*tt*y1;
+          var c=COL[(bi++)%COL.length];
+          el('line',{x1:x,y1:y,x2:x,y2:y+9,stroke:'#14532d','stroke-width':'2','stroke-opacity':'.55'},W);
+          var b=el('ellipse',{cx:x,cy:y+16,rx:'6',ry:'9',fill:c,'class':'xb'},W);
+          b.style.animationDelay=((bi*0.53)%2.2).toFixed(2)+'s';
+          b.style.filter='drop-shadow(0 0 6px '+c+')';
+        }
+      });
+    }
+    draw();var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(draw,150);});
   }catch(e){}
 })();
 </script>
