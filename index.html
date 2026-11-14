@@ -156,8 +156,8 @@
             <div class="grid lg:grid-cols-2 gap-0 items-center">
                 <div class="p-8 sm:p-12 space-y-5 text-center lg:text-left">
                     <span class="inline-block text-xs font-extrabold uppercase tracking-widest bg-white text-red-700 px-4 py-1.5 rounded-full">🎁 Christmas Gift Idea</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" style="font-family:'Mountains of Christmas','Plus Jakarta Sans',cursive">The Perfect Personal Christmas Gift</h2>
-                    <p class="text-green-50 text-base sm:text-lg">Upload your favorite photos, move and resize them, pick your mug color, and create a one-of-a-kind mug in minutes. Made by you, loved by them.</p>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" style="font-family:'Mountains of Christmas','Plus Jakarta Sans',cursive">Your Design. Their Christmas.</h2>
+                    <p class="text-green-50 text-base sm:text-lg">Upload your photos, pick a color and create a one-of-a-kind mug in minutes. A personal Christmas gift.</p>
                     <button onclick="openDesigner()" class="px-7 py-4 rounded-2xl bg-white text-red-700 hover:bg-red-50 text-base font-extrabold shadow-xl transition-all">🎨 Create Your Own Design</button>
                 </div>
                 <div class="bg-black/20">
@@ -226,8 +226,8 @@
     <section id="faq" class="py-20 bg-gray-50">
         <div class="max-w-3xl mx-auto px-6">
             <div class="text-center mb-10 space-y-3">
-                <h2 class="text-3xl font-extrabold text-gray-900">Frequently Asked Questions</h2>
-                <p class="text-gray-600 text-base">Everything you need to know about delivery, print quality and orders.</p>
+                <h2 class="text-3xl font-extrabold text-gray-900">Good to Know 🎄</h2>
+                <p class="text-gray-600 text-base">Delivery, print quality and orders, in short.</p>
             </div>
             <div id="faqList" class="space-y-3"></div>
         </div>
@@ -307,6 +307,10 @@
                 <div class="flex justify-between text-base font-bold text-gray-900">
                     <span>Subtotal</span>
                     <span id="cartSubtotal">$19.99</span>
+                </div>
+                <div id="cartPromoTotal" class="hidden flex justify-between text-sm font-extrabold text-green-700 bg-green-50 border border-green-200 rounded-xl px-3 py-2">
+                    <span id="cartPromoTotalLabel">🎄 After white-mug discount</span>
+                    <span id="cartPromoTotalAmount">$0.00</span>
                 </div>
                 <button onclick="openCheckout()" class="block text-center w-full py-4 rounded-2xl text-base font-bold text-white bg-red-600 hover:bg-red-700 shadow-lg shadow-red-600/20 transition-all">
                     Proceed to Checkout
@@ -586,7 +590,7 @@
         </header>
 
         <main class="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-6">
-            <p class="text-sm text-gray-600">Upload your pictures, then move, resize, rotate and crop them on the print area below and preview your mug. Drag the green round handle above a selected picture to rotate it. The print area is the same for 11 oz and 15 oz mugs.</p>
+            <p class="text-sm text-gray-600">Upload pictures, then move, resize, rotate and crop them on the print area. Drag the green handle to rotate.</p>
 
             <div class="flex flex-wrap items-center gap-3">
                 <label class="px-5 py-3 rounded-2xl bg-red-600 hover:bg-red-700 text-white text-sm font-bold cursor-pointer shadow-md">
@@ -628,7 +632,7 @@
             </div>
 
             <div id="designCropBar" class="hidden p-4 bg-white border-2 border-red-300 rounded-2xl space-y-3">
-                <p class="text-xs font-extrabold text-red-800">✂️ Crop: drag the round handles on the picture (on the print area above) to cut away the parts you do not want. The faded part is what will be removed.</p>
+                <p class="text-xs font-extrabold text-red-800">✂️ Crop: drag the round handles to cut away what you do not want.</p>
                 <div class="flex flex-wrap items-center gap-2">
                     <span class="text-xs font-bold text-gray-500">Shape</span>
                     <span id="cropRatioBtns" class="flex flex-wrap gap-2"></span>
@@ -661,7 +665,7 @@
                     <button id="designAddBtn" onclick="designerAddToCart()" class="px-6 py-3 rounded-2xl bg-red-600 hover:bg-red-700 text-white text-sm font-bold shadow-md">Add to Cart - <span id="designAddPrice">$0.00</span></button>
                     <button onclick="designerGoToCheckout()" class="px-6 py-3 rounded-2xl bg-white border border-gray-300 hover:bg-gray-100 text-sm font-bold text-gray-800">Go to checkout</button>
                 </div>
-                <p class="text-[11px] text-gray-500">You can add the same design in several colors and sizes: pick a color and size, click Add to Cart, then pick another. After you pay, your design file is sent to us and we make your mug.</p>
+                <p class="text-[11px] text-gray-500">Want more colors or sizes? Add to Cart, then pick another. After you pay, we print your mug.</p>
             </div>
         </main>
 
@@ -1325,17 +1329,17 @@
     <!-- Core Store Script -->
     <script>
         const defaultTexts = {
-            announcement: "🎄 Christmas Sale: 50% OFF all white mugs, our gift to you! | Free Worldwide Shipping on Orders Over $50 🎁",
-            statementTag: "Holiday Magic",
-            statementTitle: "More Than a Mug. A Christmas Memory.",
-            statementDesc: "Every Christmas Store mug is a little piece of holiday joy: warm drinks, family traditions and the people you love, in your hands every morning.",
+            announcement: "🎄 Christmas Sale: 50% OFF white mugs! | Free Worldwide Shipping over $50 🎁",
+            statementTag: "Pride & Tradition",
+            statementTitle: "A Mug With Heart. A Gift With Meaning.",
+            statementDesc: "Pride, heritage and holiday warmth in every cup. A Christmas gift they will treasure.",
             statementQuoteHe: '🎄 ✨ 🎁',
-            statementQuoteEn: '"Wishing you a season of warmth, light and joy"',
+            statementQuoteEn: '"Proud of who we are. Warm for the season."',
             brandName: 'Christmas <span class="text-red-600">Store</span>',
-            badge: "Holiday Edition",
+            badge: "Christmas Gift",
             productTitle: "Christmas Mug",
             oldPrice: "$29.99",
-            productDesc: "A festive 11 oz ceramic mug, printed with love and made for cozy holiday mornings. Dishwasher and microwave safe. The perfect Christmas gift.",
+            productDesc: "Proud, traditional, made for Christmas mornings. Dishwasher safe. A perfect Christmas gift.",
             styleLabel: "Select Style:",
             sizeLabel: "Select Size:",
             badge1Title: "🛡️ Secure Pay",
@@ -1344,20 +1348,20 @@
             badge2Sub: "Global Courier",
             badge3Title: "✨ Lifetime",
             badge3Sub: "Quality Guarantee",
-            revHeading: "Loved by Families Everywhere",
-            revSub: "Read real reviews from customers who made their holidays a little warmer.",
+            revHeading: "Loved This Christmas",
+            revSub: "Real reviews from happy families.",
             contactEmail: "shalomdahar@gmail.com",
-            r1Text: "The perfect Christmas gift. Everyone in the family wanted one!",
+            r1Text: "The perfect Christmas gift. Everyone wanted one!",
             r1Author: "— Liam S., Happy Customer",
-            r2Text: "The print quality is stunning and it arrived beautifully packaged, just in time for the holidays.",
+            r2Text: "Beautiful print, arrived just in time for Christmas.",
             r2Author: "— Maya R., Happy Customer",
-            r3Text: "Fast shipping and gorgeous packaging. I bought two more as gifts for my friends.",
+            r3Text: "Fast shipping, gorgeous packaging. Ordered two more as gifts!",
             r3Author: "— Daniel K., Happy Customer",
             r4Text: "",
             r4Author: "",
             missionTag: "Our Story",
-            missionTitle: "Made for Cozy Holiday Mornings",
-            missionDesc: "We believe every holiday deserves a mug worth keeping. Christmas Store was born from a love of cozy mornings, great gifts and designs that make people smile.",
+            missionTitle: "Pride, Tradition & Christmas Cheer",
+            missionDesc: "We make mugs that celebrate heritage and the warmth of the holidays. Made to be given, made to be kept.",
             footer: "© 2026 Christmas Store. All rights reserved. Dynamic Admin System."
         };
 
@@ -1433,9 +1437,9 @@
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVtZnFjeHpmZG91bXh2YmZ1dmt3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE1MTIzODksImV4cCI6MjEwNzA4ODM4OX0.iGzlpo8JL8VaInXuu-GXfdzQlMqrwmq-f5GIsyl13SU';
         const SERVER_MODE = !!(SUPABASE_URL && SUPABASE_ANON_KEY);
         const DEFAULT_FAQ = [
-            { q: 'How long does delivery take?', a: 'Every mug is printed to order. Printing and packing usually take 2-5 business days, and then the mug is shipped to your address. Delivery time depends on your country, and the shipping options and costs are shown at checkout. You will receive an email confirmation after your order.' },
-            { q: 'What is the print quality like?', a: 'Designs are printed with a high-quality sublimation process on ceramic mugs, so the colors are vivid and the print does not peel or fade with normal use. The mugs are dishwasher and microwave safe. For the sharpest result, upload a high-resolution picture in Create Your Own Design.' },
-            { q: 'What happens if there is a problem with my order?', a: 'If your mug arrives damaged, the print is wrong or something else is not right, contact us using the Contact button with your order details and a photo of the problem. We will fix it by sending a replacement or refunding you.' }
+            { q: 'How long does delivery take?', a: 'Every mug is printed to order: 2-5 business days to print and pack, then shipped. Delivery time and cost are shown at checkout.' },
+            { q: 'What is the print quality like?', a: 'A vivid, long-lasting sublimation print on ceramic. Dishwasher and microwave safe. For the sharpest result, upload a high-resolution picture.' },
+            { q: 'What if there is a problem with my order?', a: 'Contact us with your order details and a photo, and we will send a replacement or refund you.' }
         ];
 
         // Mug colors and the mug photos (files in the "mugs" folder next to index.html) that ship with the site.
@@ -1711,12 +1715,12 @@
         // Extra mugs are stored in storeState.extraProducts.
 
         function defaultExtraProducts() {
-            const mk = (id, name) => ({
-                id: id, name: name, oldPrice: '', desc: '', basePrice: 19.99, visible: true,
+            const mk = (id, name, desc) => ({
+                id: id, name: name, oldPrice: '', desc: desc || '', basePrice: 19.99, visible: true,
                 size15: { enabled: false, extra: 0 },
                 variants: [{ name: 'Classic White', color: '#ffffff', images: [PLACEHOLDER_MUG_IMAGE], images15: [] }]
             });
-            return [mk('p2', 'CHRISTMAS TREE MUG'), mk('p3', "SANTA'S COCOA MUG")];
+            return [mk('p2', 'CHRISTMAS TREE MUG', 'Tradition, pride and holiday cheer. A great Christmas gift.'), mk('p3', "SANTA'S COCOA MUG", 'Warm cocoa, proud roots, festive spirit. A great Christmas gift.')];
         }
 
         function ensureExtraProducts(st) {
@@ -2216,7 +2220,7 @@
                 const el = document.getElementById('xmasSaleTitle');
                 if (el) el.textContent = pctTxt + '% OFF All White Mugs';
                 const tx = document.getElementById('xmasSaleText');
-                if (tx) tx.textContent = 'Our Christmas gift to you: buy 2 or more white mugs and save ' + pctTxt + '%. A single white mug is just $' + sp.toFixed(2) + '.';
+                if (tx) tx.textContent = 'Our Christmas gift to you: buy 2 or more white mugs and save ' + pctTxt + '%. One white mug: $' + sp.toFixed(2) + '.';
             } catch (e) { /* ignore */ }
         }
         function initStore() {
@@ -2389,8 +2393,27 @@
             return { totalCount, rawSubtotal, finalSubtotal, discountAmount, promoAmount, bulkAmount, promoUnits, promoActive: !!pr, promoPercent: wp.percent, promoSingle: promoSingle, singlePrice: singlePrice };
         }
 
+        // price preview "after the white-mug discount" for the cart (the discount itself is applied at checkout for the chosen destination)
+        function xmasCartPromo() {
+            try {
+                const d = (storeState.destinations || []).filter(promoOf)[0];
+                if (!d || !cartItems.some(cartItemPromoEligible)) return null;
+                const t = calculateCartTotals(d.name);
+                const wp = storeState.whitePromo || {};
+                const pct = Number(wp.percent) || 50;
+                const sp = Number(wp.singlePrice) > 0 ? Number(wp.singlePrice) : 14.99;
+                const unit = (price) => t.promoSingle ? Math.min(price, sp) : Math.round((price * (1 - pct / 100) + 1e-9) * 100) / 100;
+                return { totals: t, unit: unit };
+            } catch (e) { return null; }
+        }
         function updateCartUI() {
             const { totalCount, rawSubtotal, finalSubtotal, discountAmount } = calculateCartTotals();
+            const xp = xmasCartPromo();
+            const xpBox = document.getElementById('cartPromoTotal');
+            if (xpBox) {
+                xpBox.classList.toggle('hidden', !xp);
+                if (xp) document.getElementById('cartPromoTotalAmount').textContent = '$' + xp.totals.finalSubtotal.toFixed(2);
+            }
             const cartCountEl = document.getElementById('cartCount');
             if (cartCountEl) cartCountEl.innerText = totalCount;
 
@@ -2442,6 +2465,7 @@
                             </div>
                             <div class="text-right">
                                 <span class="text-sm font-extrabold text-red-600">$${(item.price * item.quantity).toFixed(2)}</span>
+                                ${(xp && cartItemPromoEligible(item)) ? `<div class="text-xs font-extrabold text-green-700 mt-0.5">After discount: $${(xp.unit(item.price) * item.quantity).toFixed(2)}</div>` : ''}
                             </div>
                         `;
                         container.appendChild(div);
