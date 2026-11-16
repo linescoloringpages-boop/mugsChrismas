@@ -1425,24 +1425,20 @@
                 { text: "Fast shipping and gorgeous packaging. I bought two more as gifts for my friends.", author: "— Daniel K., Explorer" }
             ],
             variants: [
-                { 
-                    name: 'Classic White', 
-                    color: '#ffffff',
-                    images: [
-                        'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1000&q=80', 
-                        'https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=1000&q=80', 
-                        'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1000&q=80'
-                    ] 
-                },
-                { 
-                    name: 'Festive Red', 
-                    color: '#b91c1c',
-                    images: [
-                        'https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=1000&q=80', 
-                        'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1000&q=80'
-                    ] 
-                }
+                { name: 'White', color: '#ffffff', images: ['mugs/white-11-front.jpg','mugs/white-11-right.jpg','mugs/white-11-left.jpg'], images15: ['mugs/white-15-front.jpg','mugs/white-15-right.jpg','mugs/white-15-left.jpg'] },
+                { name: 'Black', color: '#111111', images: ['mugs/black-11-front.jpg','mugs/black-11-right.jpg','mugs/black-11-left.jpg'], images15: ['mugs/black-15-front.jpg','mugs/black-15-right.jpg','mugs/black-15-left.jpg'] },
+                { name: 'Red', color: '#c8102e', images: ['mugs/red-11-front.jpg','mugs/red-11-right.jpg','mugs/red-11-left.jpg'], images15: ['mugs/red-15-front.jpg','mugs/red-15-right.jpg','mugs/red-15-left.jpg'] },
+                { name: 'Maroon', color: '#7b2038', images: ['mugs/maroon-11-front.jpg','mugs/maroon-11-right.jpg','mugs/maroon-11-left.jpg'], images15: ['mugs/maroon-15-front.jpg','mugs/maroon-15-right.jpg','mugs/maroon-15-left.jpg'] },
+                { name: 'Orange', color: '#e8470a', images: ['mugs/orange-11-front.jpg','mugs/orange-11-right.jpg','mugs/orange-11-left.jpg'], images15: ['mugs/orange-15-front.jpg','mugs/orange-15-right.jpg','mugs/orange-15-left.jpg'] },
+                { name: 'Yellow', color: '#c3b145', images: ['mugs/yellow-11-front.jpg','mugs/yellow-11-right.jpg','mugs/yellow-11-left.jpg'], images15: ['mugs/yellow-15-front.jpg','mugs/yellow-15-right.jpg','mugs/yellow-15-left.jpg'] },
+                { name: 'Light Green', color: '#8bc04c', images: ['mugs/lightgreen-11-front.jpg','mugs/lightgreen-11-right.jpg','mugs/lightgreen-11-left.jpg'], images15: ['mugs/lightgreen-15-front.jpg','mugs/lightgreen-15-right.jpg','mugs/lightgreen-15-left.jpg'] },
+                { name: 'Green', color: '#01473c', images: ['mugs/green-11-front.jpg','mugs/green-11-right.jpg','mugs/green-11-left.jpg'], images15: ['mugs/green-15-front.jpg','mugs/green-15-right.jpg','mugs/green-15-left.jpg'] },
+                { name: 'Light Blue', color: '#028ccb', images: ['mugs/lightblue-11-front.jpg','mugs/lightblue-11-right.jpg','mugs/lightblue-11-left.jpg'], images15: ['mugs/lightblue-15-front.jpg','mugs/lightblue-15-right.jpg','mugs/lightblue-15-left.jpg'] },
+                { name: 'Cambridge Blue', color: '#2569cc', images: ['mugs/cambridgeblue-11-front.jpg','mugs/cambridgeblue-11-right.jpg','mugs/cambridgeblue-11-left.jpg'], images15: ['mugs/cambridgeblue-15-front.jpg','mugs/cambridgeblue-15-right.jpg','mugs/cambridgeblue-15-left.jpg'] },
+                { name: 'Blue', color: '#1d0a4c', images: ['mugs/blue-11-front.jpg','mugs/blue-11-right.jpg','mugs/blue-11-left.jpg'], images15: ['mugs/blue-15-front.jpg','mugs/blue-15-right.jpg','mugs/blue-15-left.jpg'] },
+                { name: 'Pink', color: '#d192a5', images: ['mugs/pink-11-front.jpg','mugs/pink-11-right.jpg','mugs/pink-11-left.jpg'], images15: ['mugs/pink-15-front.jpg','mugs/pink-15-right.jpg','mugs/pink-15-left.jpg'] }
             ],
+            size15: { enabled: true, extra: 3.8 },
             destinations: [
                 { name: 'United States', rate: 5.00 },
                 { name: 'Israel', rate: 12.00 },
@@ -1761,7 +1757,7 @@
                 size15: { enabled: false, extra: 0 },
                 variants: [{ name: 'Classic White', color: '#ffffff', images: [PLACEHOLDER_MUG_IMAGE], images15: [] }]
             });
-            return [mk('p2', 'CHRISTMAS TREE MUG', 'Tradition, pride and holiday cheer. A great Christmas gift.'), mk('p3', "SANTA'S COCOA MUG", 'Warm cocoa, proud roots, festive spirit. A great Christmas gift.')];
+            return [];
         }
 
         function ensureExtraProducts(st) {
