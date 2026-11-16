@@ -12,12 +12,15 @@
     <meta property="og:site_name" content="Christmas Store">
     <meta property="og:title" content="Christmas Store — Festive Holiday Mugs">
     <meta property="og:description" content="Festive 11 oz ceramic mugs, printed with love and made for cozy holiday mornings. The perfect Christmas gift.">
-    <meta property="og:image" content="https://i.imgur.com/lJXGDZt.jpeg">
-    <meta property="og:image:alt" content="Christmas Store festive holiday mug">
+    <meta property="og:image" content="https://rootsandpridechristmas.netlify.app/og-image.jpg">
+    <meta property="og:image:alt" content="Christmas Store: a decorated Christmas tree with colorful lights. Create your own Christmas mug.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://rootsandpridechristmas.netlify.app/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Christmas Store — Festive Holiday Mugs">
     <meta name="twitter:description" content="Festive 11 oz ceramic mugs, printed with love and made for cozy holiday mornings. The perfect Christmas gift.">
-    <meta name="twitter:image" content="https://i.imgur.com/lJXGDZt.jpeg">
+    <meta name="twitter:image" content="https://rootsandpridechristmas.netlify.app/og-image.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -276,6 +279,25 @@
         </div>
     </section>
 
+
+    <!-- Legal pages (Privacy Policy and Terms of Service) -->
+    <div id="legalModal" class="fixed inset-0 z-[80] bg-black/60 backdrop-blur-sm hidden overflow-y-auto py-8 px-4" onclick="if(event.target===this)closeLegal()">
+        <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl">
+            <div class="sticky top-0 bg-white rounded-t-3xl border-b border-gray-200 px-6 py-4 flex items-center justify-between gap-3">
+                <h2 id="legalTitle" class="text-xl font-extrabold text-gray-900"></h2>
+                <div class="flex items-center gap-2">
+                    <button onclick="openLegal('privacy')" id="legalTabPrivacy" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-gray-300">Privacy Policy</button>
+                    <button onclick="openLegal('terms')" id="legalTabTerms" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-gray-300">Terms of Service</button>
+                    <button onclick="closeLegal()" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 font-bold" aria-label="Close">✕</button>
+                </div>
+            </div>
+            <div class="px-6 py-6">
+                <div id="legal_privacy" class="hidden"><p class="text-xs text-gray-500 mb-4">Last updated: November 16, 2026</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">1. Who we are</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">Christmas Store ("we", "us", "our") runs this website, where you can design and order custom printed mugs (the "Site"). This Privacy Policy explains what personal information we collect, how we use it, who we share it with, and the choices you have. By using the Site or placing an order you agree to this policy.</p><p class="text-sm text-gray-700 leading-relaxed mb-2">Contact for privacy questions: <a class="legalEmail underline font-bold text-red-700" href="mailto:"></a>.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">2. Information we collect</h3><ul class="list-disc pl-5 space-y-1 text-sm text-gray-700 leading-relaxed"><li><b>Order and contact details:</b> your name, email address, phone number and shipping address, and the details of your order.</li><li><b>Your designs and uploads:</b> the pictures, text and layouts you upload or create in the design tool, and the preview images generated from them.</li><li><b>Payment information:</b> payments are handled by PayPal or by the cryptocurrency payment options shown at checkout. We do not receive or store your card number or PayPal password. We receive the payment confirmation, the amount, the transaction ID and, for PayPal, the payer details PayPal shares with us.</li><li><b>Reviews you submit:</b> your name, review text and any photos you choose to add.</li><li><b>Messages:</b> anything you send us by email, including photos of a problem with an order.</li><li><b>Basic technical data:</b> your browser stores your cart and drafts on your own device (local storage) so the Site works. Our hosting and service providers may log technical data such as IP address, browser type and the time of requests for security and operation.</li></ul><p class="text-sm text-gray-700 leading-relaxed mb-2">We do not knowingly collect information about children under 16, and the Site is not directed at them.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">3. How we use your information</h3><ul class="list-disc pl-5 space-y-1 text-sm text-gray-700 leading-relaxed"><li>To process, print, pack and ship your order, and to take payment.</li><li>To email you about your order, such as confirmation, approval, tracking and any question about your design.</li><li>To provide customer support and handle problems, replacements and refunds.</li><li>To prevent fraud, abuse and misuse, and to keep the Site secure.</li><li>To keep records and meet legal, tax and accounting obligations.</li><li>To publish your review on the Site if you submit one.</li></ul><p class="text-sm text-gray-700 leading-relaxed mb-2">We do not sell your personal information. We do not use your uploaded designs for advertising or show them to other customers without your permission.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">4. Who we share it with</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">We share information only as needed to run the Site and fulfil your order, with these kinds of service providers:</p><ul class="list-disc pl-5 space-y-1 text-sm text-gray-700 leading-relaxed"><li><b>Hosting and database:</b> our website host (Netlify) and our database and file storage provider (Supabase), which store the Site, orders, settings and uploaded designs.</li><li><b>Payments:</b> PayPal, or the cryptocurrency payment option you choose.</li><li><b>Email and forms:</b> our email and form delivery services (such as Web3Forms and Gmail), which carry order notifications and messages to you.</li><li><b>Printing and shipping:</b> printing, packing and delivery partners and carriers, who receive your name, address, phone number and the design to be printed.</li><li><b>Authorities and professional advisers:</b> when the law requires it, or to protect our rights, or to our legal and accounting advisers.</li></ul><p class="text-sm text-gray-700 leading-relaxed mb-2">These providers may process data in countries other than yours, including the United States. We use providers that apply reasonable safeguards, but no internet service can be guaranteed to be completely secure.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">5. How long we keep it</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">We keep order information, designs and related messages for as long as needed to fulfil the order, provide support and warranty handling, resolve disputes and meet legal and tax requirements, and then delete or anonymize it when it is no longer needed.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">6. Your choices and rights</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">Depending on where you live (for example under the GDPR in the European Economic Area and the UK, or the CCPA/CPRA in California), you may have the right to ask us to access, correct, delete or export your personal information, to object to or restrict some processing, and to withdraw consent where we rely on it. To use these rights, email <a class="legalEmail underline font-bold text-red-700" href="mailto:"></a> from the address you used to order. We may need to verify your identity, and we may keep information we are legally required to keep, or that we need to handle an open order or dispute. You can also complain to your local data protection authority.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">7. Cookies and similar technologies</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">The Site uses your browser's local storage to remember your cart and settings. At the time of writing we do not use advertising or tracking cookies. Our payment provider may set its own cookies when you use its checkout. If we add analytics or advertising tools in the future, we will update this policy and, where required, ask for your consent.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">8. Security</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">We use reasonable technical and organizational measures to protect your information, including encrypted connections (HTTPS) and access controls on our database. No method of transmission or storage is completely secure, so we cannot guarantee absolute security.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">9. Changes to this policy</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">We may update this policy from time to time. The "Last updated" date above shows the latest version. Continuing to use the Site after a change means you accept the updated policy.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">10. Contact</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">Questions about this policy or your data: <a class="legalEmail underline font-bold text-red-700" href="mailto:"></a>.</p></div>
+                <div id="legal_terms" class="hidden"><p class="text-xs text-gray-500 mb-4">Last updated: November 16, 2026</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">1. Agreement</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">These Terms of Service ("Terms") govern your use of the Christmas Store website and your purchases from us. By using the Site or placing an order you confirm that you have read and accept these Terms and our Privacy Policy. If you do not agree, please do not use the Site or place an order. You must be at least 18 years old, or have the permission of a parent or guardian, to place an order.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">2. Custom-made products</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">Every mug is printed to order after you place your order, whether it is one of our own designs or a mug you design yourself in the design tool. Because it is made specifically for you and cannot be resold, the return rules in section 8 apply.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">3. Your designs and uploaded content (design tool)</h3><ul class="list-disc pl-5 space-y-1 text-sm text-gray-700 leading-relaxed"><li>You are fully responsible for everything you upload or type, including images, logos, names and text, and for checking spelling, content and placement before you order. We print what you submit.</li><li>You confirm that you own the content or have all rights and permissions needed to use it and to have it printed (including copyright, trademark, and the rights of any person shown in a photo).</li><li>You must not submit content that is unlawful, infringing, hateful, harassing, sexually explicit, defamatory, or that violates the rights of others. This includes copyrighted characters, brands and logos you do not have permission to use.</li><li>You give us a limited, non-exclusive licence to store, reproduce and process your content only to make, print, show you a preview of and deliver your order, and to handle support and legal claims.</li><li>We may refuse, pause or cancel any order whose content we believe breaks these rules or the law. In that case we will refund the amount paid for that order.</li><li>You agree to compensate us for any claim, loss or cost arising from content you submit that infringes the rights of others or breaks the law.</li></ul><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">4. Previews and print results</h3><ul class="list-disc pl-5 space-y-1 text-sm text-gray-700 leading-relaxed"><li>The on-screen preview shows an approximation of how your design will look. Colors can look different on screen and in print, and the exact position, size and edge of the print can vary slightly. Small variations like these are normal and are not defects.</li><li>The sharpness of the print depends on the quality of the image you upload. Low-resolution or blurry images will print low quality, and we are not responsible for that.</li><li>By adding your design to the cart and paying, you approve the design as shown.</li></ul><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">5. Orders, prices and payment</h3><ul class="list-disc pl-5 space-y-1 text-sm text-gray-700 leading-relaxed"><li>Prices are shown in US dollars unless stated otherwise. Promotions and discounts apply only as described on the Site at the time of order and may be changed or ended at any time.</li><li>Placing an order is an offer to buy. An order is accepted when we confirm it. We may decline or cancel an order, for example because of a pricing or availability error, a suspected fraud, or a content problem, and we will refund any payment for an order we cancel.</li><li>Shipping costs are shown at checkout. You are responsible for any import duties, customs fees and local taxes in your country, unless the Site says they are included.</li><li>Payments are processed by PayPal or by the cryptocurrency option you choose. Cryptocurrency transfers are final and cannot be reversed by us, and you are responsible for the correct amount, network, wallet address and any network fees.</li><li>Please contact us first if you have a problem with your order, before you open a payment dispute or chargeback. We resolve legitimate problems quickly.</li></ul><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">6. Production, shipping and delivery</h3><ul class="list-disc pl-5 space-y-1 text-sm text-gray-700 leading-relaxed"><li>Orders are printed to order. Production, packing and delivery times shown on the Site are estimates, not guarantees.</li><li>You are responsible for giving a complete and correct shipping address and phone number. We are not responsible for failed or lost deliveries, extra shipping costs, or delay caused by a wrong or incomplete address, and a package returned because of a wrong address may be re-shipped only at your cost.</li><li>Delivery times can be affected by carriers, customs, holidays and events outside our control, and we are not liable for such delays.</li><li>Risk of loss or damage passes to you when the package is handed to the carrier, except for the broken-in-transit case in section 8.</li></ul><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">7. Cancellations and changes</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">Because production starts quickly, you can request to change or cancel an order only by emailing us right away at <a class="legalEmail underline font-bold text-red-700" href="mailto:"></a> with your order number, and only if we have not yet started printing it. Once printing has started, the order cannot be changed or cancelled.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">8. Returns, refunds and replacements</h3><p class="text-sm text-gray-700 leading-relaxed mb-2"><b>All sales of custom mugs are final. We do not accept returns or give refunds or exchanges for change of mind, ordering the wrong color or size, mistakes in your design or text, image quality that matches what you uploaded, slight differences between the preview and the printed result, or any other reason, except in the two cases below.</b></p><ul class="list-disc pl-5 space-y-1 text-sm text-gray-700 leading-relaxed"><li><b>Broken or damaged in transit:</b> the mug arrived broken or cracked.</li><li><b>Defect:</b> the mug has a manufacturing or printing defect, such as a print that is clearly missing, smeared or badly misprinted compared to your approved design, or a damaged or faulty mug.</li></ul><p class="text-sm text-gray-700 leading-relaxed mb-2">In these cases we will review whether a refund or replacement is possible. To be considered, you must email <a class="legalEmail underline font-bold text-red-700" href="mailto:"></a> within <b>7 days of delivery</b> with your order number and clear photos of the mug, the damage or defect, and the packaging. We may ask for more information. If we confirm the problem, we will, at our choice, send a replacement or refund the amount you paid for the affected mug. Our decision on whether the case qualifies is made after the review. You must keep the packaging until the claim is closed. We may ask you to return the mug at our cost, or to dispose of it.</p><p class="text-sm text-gray-700 leading-relaxed mb-2">Shipping costs are not refunded, except where the law requires it. Nothing in this section limits any right you have by law that cannot be excluded.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">9. Care of your mug</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">To make the print last, we recommend gentle washing and avoiding abrasive scrubbing. Do not use a mug that is chipped or cracked. Allow hot drinks to cool before use, and take care when handling hot mugs. Microwave and dishwasher suitability may vary, and damage caused by misuse or normal wear is not a defect.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">10. Intellectual property</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">The Site, its design, text, graphics, logos, software and the Christmas Store name are owned by us or our licensors and are protected by law. You may not copy, scrape, reproduce or reuse them without our written permission, except for your own personal use of the Site as intended. The designs you create belong to you or your licensors as described in section 3.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">11. Acceptable use</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">You agree not to misuse the Site: for example by trying to break, overload or gain unauthorized access to it or its data, using automated tools to scrape it, submitting false or fraudulent orders or payment information, or using it for anything unlawful.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">12. Disclaimers</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">The Site and our products are provided "as is" and "as available". To the fullest extent the law allows, we do not make any warranty other than those stated in these Terms, including any implied warranty of merchantability or fitness for a particular purpose, and we do not guarantee that the Site will be uninterrupted or error free.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">13. Limitation of liability</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">To the fullest extent permitted by law, we are not liable for any indirect, incidental, special, consequential or punitive loss, or for loss of profits, data or goodwill, arising from your use of the Site or our products. Our total liability for any claim relating to an order is limited to the amount you paid for that order. Nothing in these Terms excludes or limits liability that cannot be excluded or limited by law, including liability for fraud, or any mandatory consumer rights in your country.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">14. Governing law and disputes</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">These Terms are governed by the laws of the country in which the operator of Christmas Store is established, without regard to conflict-of-law rules, and the courts of that country will have jurisdiction, unless mandatory consumer protection law in your country gives you the right to bring a claim elsewhere. Before starting any formal claim, please contact us so that we can try to resolve the problem informally.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">15. Changes</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">We may update these Terms from time to time. The version in force when you place an order applies to that order. The "Last updated" date above shows the latest version.</p><h3 class="text-base font-extrabold text-gray-900 mt-6 mb-2">16. Contact</h3><p class="text-sm text-gray-700 leading-relaxed mb-2">Christmas Store, email: <a class="legalEmail underline font-bold text-red-700" href="mailto:"></a>.</p></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
@@ -284,7 +306,13 @@
                 <p class="text-[11px] font-bold uppercase tracking-wider text-gray-500">Contact us</p>
                 <a id="contactEmailLink" href="mailto:" class="text-sm font-bold text-white hover:text-red-300 underline break-all"></a>
             </div>
-            <p id="txt_footer" class="text-sm text-gray-400">© 2026 Christmas Store. All rights reserved. Dynamic Admin System.</p>
+            <div class="text-center sm:text-right space-y-1">
+                <div class="flex items-center justify-center sm:justify-end gap-4 text-sm font-bold">
+                    <a href="#privacy" onclick="openLegal('privacy');return false;" class="text-gray-300 hover:text-white underline">Privacy Policy</a>
+                    <a href="#terms" onclick="openLegal('terms');return false;" class="text-gray-300 hover:text-white underline">Terms of Service</a>
+                </div>
+                <p id="txt_footer" class="text-sm text-gray-400">© 2026 Christmas Store. All rights reserved. Dynamic Admin System.</p>
+            </div>
         </div>
     </footer>
 
@@ -380,7 +408,11 @@
                     <textarea id="chkFullAddress" rows="3" maxlength="500" dir="auto" autocomplete="off" placeholder="Write your complete address exactly as it should appear on the package: street and number, apartment / floor / entrance, city, state / province, ZIP / postal code and country." class="w-full px-4 py-3 rounded-2xl border border-gray-300 outline-none text-sm font-medium bg-white resize-y"></textarea>
                     <p class="text-[11px] text-gray-400 mt-1">Typing your full address here helps us avoid delivery mistakes.</p>
                 </div>
-                <div class="pt-4">
+                <label class="flex items-start gap-2 text-xs text-gray-700 cursor-pointer pt-2">
+                    <input type="checkbox" id="chkAgreeTerms" class="mt-0.5 w-4 h-4 shrink-0">
+                    <span>I have read and agree to the <a href="#terms" onclick="openLegal('terms');return false;" class="underline font-bold text-red-700">Terms of Service</a> and the <a href="#privacy" onclick="openLegal('privacy');return false;" class="underline font-bold text-red-700">Privacy Policy</a>. I understand that my mug is made to order and cannot be returned or refunded, except if it arrives broken or defective (see the Terms).</span>
+                </label>
+                <div class="pt-2">
                     <button onclick="goToPaymentStep()" class="w-full py-4 rounded-2xl text-base font-extrabold text-white bg-red-600 hover:bg-red-700 shadow-xl shadow-red-600/25 transition-all">
                         Proceed to Payment ➔
                     </button>
@@ -1288,6 +1320,15 @@
                     <h4 class="text-sm font-extrabold text-gray-900">1. Order email notifications</h4>
                     <p class="text-xs text-gray-600">Every new order is sent to your inbox. Create a free account at <b>web3forms.com</b>: type your email address and your <b>Access Key</b> arrives by email. Paste it here. The email is the main record of each order on the live site, so keep it safe.</p>
                     <input type="text" id="adminOrderNotifyKey" autocomplete="off" spellcheck="false" placeholder="Web3Forms Access Key" class="w-full px-3 py-2.5 rounded-xl border border-gray-300 text-xs font-mono bg-white">
+                    <label class="flex items-start gap-2 text-xs font-bold text-gray-800 cursor-pointer">
+                        <input type="checkbox" id="adminApprovedEmail" onchange="saveApprovedEmailToggle()" class="mt-0.5 w-4 h-4">
+                        <span>When I mark an order as <b>handled</b>, email the customer that the order was confirmed (with the order details). <span class="font-normal text-gray-600">Needs Web3Forms Pro, like the option below. You can also write your own emails from every order in the Orders tab.</span></span>
+                    </label>
+                    <label class="flex items-start gap-2 text-xs font-bold text-gray-800 cursor-pointer">
+                        <input type="checkbox" id="adminCustomerEmail" onchange="saveCustomerEmailToggle()" class="mt-0.5 w-4 h-4">
+                        <span>Also email an order confirmation to the customer (order details, total, and the name, email, phone and address they entered). <span class="font-normal text-gray-600">This needs the <b>Web3Forms Pro</b> plan with the Autoresponder turned on, see the note below.</span></span>
+                    </label>
+                    <p class="text-[11px] text-gray-500">In your Web3Forms dashboard open this form, then Form Settings, and turn on <b>Autoresponder</b>. Turn on "Show copy of their submission in the email". Without the Pro plan the customer gets nothing, and you only get one extra copy of each confirmation.</p>
                     <div class="flex flex-wrap gap-2">
                         <button onclick="saveOrderNotifyKey()" class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold">Save key</button>
                         <button onclick="sendTestOrderEmail()" class="px-4 py-2 rounded-xl bg-gray-800 hover:bg-black text-white text-xs font-bold">Send test email</button>
@@ -1433,8 +1474,8 @@
         // ================= Supabase (your server) =================
         // SUPABASE_ANON_KEY is the PUBLIC key and is meant to be inside the page.
         // NEVER put the "service_role" / secret key anywhere in this file.
-        const SUPABASE_URL = 'https://umfqcxzfdoumxvbfuvkw.supabase.co';
-        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVtZnFjeHpmZG91bXh2YmZ1dmt3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE1MTIzODksImV4cCI6MjEwNzA4ODM4OX0.iGzlpo8JL8VaInXuu-GXfdzQlMqrwmq-f5GIsyl13SU';
+        const SUPABASE_URL = '';   // <-- paste the new Project URL here
+        const SUPABASE_ANON_KEY = '';   // <-- paste the new anon public key (eyJ...) here
         const SERVER_MODE = !!(SUPABASE_URL && SUPABASE_ANON_KEY);
         const DEFAULT_FAQ = [
             { q: 'How long does delivery take?', a: 'Every mug is printed to order: 2-5 business days to print and pack, then shipped. Delivery time and cost are shown at checkout.' },
@@ -1838,8 +1879,9 @@
             let pct = Number(w.percent);
             if (!isFinite(pct) || pct <= 0 || pct > 100) pct = 50;
             const kw = (typeof w.keyword === 'string' && w.keyword.trim()) ? w.keyword.trim().toLowerCase().slice(0, 40) : 'white';
-            let sp = (w.singlePrice === undefined || w.singlePrice === null || w.singlePrice === '') ? 14.99 : Number(w.singlePrice);
-            if (!isFinite(sp) || sp <= 0) sp = 14.99;
+            let sp = (w.singlePrice === undefined || w.singlePrice === null || w.singlePrice === '') ? 14.90 : Number(w.singlePrice);
+            if (!isFinite(sp) || sp <= 0) sp = 14.90;
+            if (Math.round(sp * 100) === 1499) sp = 14.90;   // the old built-in single price
             st.whitePromo = { percent: Math.round(pct * 100) / 100, keyword: kw, stackBulk: !!w.stackBulk, singlePrice: Math.round(sp * 100) / 100 };
             (st.destinations || []).forEach(d => { d.promo = normDestPromo(d.promo, d); });
             return st;
@@ -1847,6 +1889,7 @@
         function promoOf(d) { return (d && d.promo && d.promo.enabled) ? d.promo : null; }
         function cartItemPromoEligible(it) {
             if (!it) return false;
+            if ((it.size || '11') === '15') return false;   // the white-mug offer is for the 11 oz mug only
             if (it.custom) return variantPromoEligible({ name: it.variant });   // a design mug in the white color
             const idx = productIndexById(it.productId || 'p1');
             if (idx < 0) return false;
@@ -2213,9 +2256,9 @@
 
         function updateXmasBanner() {
             try {
-                const w = (storeState && storeState.whitePromo) || { percent: 50, singlePrice: 14.99 };
+                const w = (storeState && storeState.whitePromo) || { percent: 50, singlePrice: 14.90 };
                 const pct = Number(w.percent) || 50;
-                const sp = Number(w.singlePrice) > 0 ? Number(w.singlePrice) : 14.99;
+                const sp = Number(w.singlePrice) > 0 ? Number(w.singlePrice) : 14.90;
                 const pctTxt = (Math.round(pct) === pct ? String(pct) : pct.toFixed(1));
                 const el = document.getElementById('xmasSaleTitle');
                 if (el) el.textContent = pctTxt + '% OFF All White Mugs';
@@ -2361,7 +2404,7 @@
             const dest = destName ? (dests.find(d => d.name === destName) || null) : null;
             const pr = promoOf(dest);
             const wp = storeState.whitePromo || { percent: 50, stackBulk: false };
-            const singlePrice = (wp.singlePrice > 0) ? wp.singlePrice : 14.99;
+            const singlePrice = (wp.singlePrice > 0) ? wp.singlePrice : 14.90;
             // the % offer needs 2 or more white mugs; a single white mug is sold at the single-mug price
             const eligibleUnits = pr ? cartItems.reduce((s, it) => s + (cartItemPromoEligible(it) ? it.quantity : 0), 0) : 0;
             const promoSingle = !!pr && eligibleUnits === 1;
@@ -2401,7 +2444,7 @@
                 const t = calculateCartTotals(d.name);
                 const wp = storeState.whitePromo || {};
                 const pct = Number(wp.percent) || 50;
-                const sp = Number(wp.singlePrice) > 0 ? Number(wp.singlePrice) : 14.99;
+                const sp = Number(wp.singlePrice) > 0 ? Number(wp.singlePrice) : 14.90;
                 const unit = (price) => t.promoSingle ? Math.min(price, sp) : Math.round((price * (1 - pct / 100) + 1e-9) * 100) / 100;
                 return { totals: t, unit: unit };
             } catch (e) { return null; }
@@ -2422,7 +2465,7 @@
                 const promoCountries = (storeState.destinations || []).filter(promoOf).map(d => d.name);
                 const show = promoCountries.length > 0 && cartItems.some(cartItemPromoEligible);
                 promoHint.classList.toggle('hidden', !show);
-                if (show) promoHint.textContent = '⭐ White mugs: ' + storeState.whitePromo.percent + '% off when you buy 2 or more (a single white mug is $' + Number(storeState.whitePromo.singlePrice || 14.99).toFixed(2) + ') for ' + promoCountries.join(', ') + ' - applied at checkout when you choose that destination.';
+                if (show) promoHint.textContent = '⭐ White mugs: ' + storeState.whitePromo.percent + '% off when you buy 2 or more (a single white mug is $' + Number(storeState.whitePromo.singlePrice || 14.90).toFixed(2) + ') for ' + promoCountries.join(', ') + ' - applied at checkout when you choose that destination.';
             }
             const discountBanner = document.getElementById('cartDiscountBanner');
             if (discountBanner) {
@@ -2479,6 +2522,30 @@
             document.getElementById('cartDrawer').classList.toggle('hidden');
         }
 
+
+        function openLegal(which) {
+            which = which === 'terms' ? 'terms' : 'privacy';
+            var m = document.getElementById('legalModal'); if (!m) return;
+            ['privacy', 'terms'].forEach(function (k) {
+                document.getElementById('legal_' + k).classList.toggle('hidden', k !== which);
+                var t = document.getElementById('legalTab' + (k === 'terms' ? 'Terms' : 'Privacy'));
+                if (t) t.className = 'px-3 py-1.5 rounded-xl text-xs font-bold border ' + (k === which ? 'bg-red-600 text-white border-red-600' : 'border-gray-300 text-gray-700');
+            });
+            document.getElementById('legalTitle').textContent = which === 'terms' ? 'Terms of Service' : 'Privacy Policy';
+            var ce = (storeState.texts && storeState.texts.contactEmail) || '';
+            Array.prototype.forEach.call(document.querySelectorAll('#legalModal .legalEmail'), function (a) { a.textContent = ce; a.href = 'mailto:' + ce; });
+            m.classList.remove('hidden'); m.scrollTop = 0;
+            try { history.replaceState(null, '', '#' + which); } catch (e) {}
+        }
+        function closeLegal() {
+            var m = document.getElementById('legalModal'); if (m) m.classList.add('hidden');
+            try { if (/^#(privacy|terms)$/.test(location.hash)) history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+        }
+        document.addEventListener('keydown', function (e) {
+            var m = document.getElementById('legalModal');
+            if (e.key === 'Escape' && m && !m.classList.contains('hidden')) { e.stopPropagation(); closeLegal(); }
+        }, true);
+        window.addEventListener('load', function () { if (/^#(privacy|terms)$/.test(location.hash)) openLegal(location.hash.slice(1)); });
         function openCheckout(i) {
             i = (typeof i === 'number') ? i : 0;
             designFilesAvailable().then(ok => {
@@ -2590,6 +2657,8 @@
             const fullAddress = document.getElementById('chkFullAddress').value.trim().slice(0, 500);
             const needState = destinationAsksState(getSelectedDestination());
             const state = needState ? document.getElementById('chkState').value.trim() : '';
+            const agree = document.getElementById('chkAgreeTerms');
+            if (agree && !agree.checked) { alert('Please tick the box to confirm that you agree to the Terms of Service and the Privacy Policy.'); return; }
 
             if (!name || !email || !street || !city) {
                 alert('Please fill in all address and customer details before proceeding to payment.');
@@ -2720,7 +2789,7 @@
                 const eligibleInCart = cartItems.some(cartItemPromoEligible);
                 promoNote.classList.toggle('hidden', !promoActive);
                 promoNote.textContent = promoActive
-                    ? ('🎉 Promo for ' + dest.name + ': white mugs ' + promoPercent + '% off when you buy 2 or more white mugs (a single white mug is $' + Number(storeState.whitePromo.singlePrice || 14.99).toFixed(2) + ')' + (eligibleInCart ? '' : ' (add a white mug to get it)') + '. ' + (dest.promo.freeShipping ? 'Free shipping!' : (dest.promo.extraPerMug > 0 ? 'Shipping: the normal rate, plus $' + dest.promo.extraPerMug.toFixed(2) + ' for each extra mug in your order.' : '')))
+                    ? ('🎉 Promo for ' + dest.name + ': white mugs ' + promoPercent + '% off when you buy 2 or more white mugs (a single white mug is $' + Number(storeState.whitePromo.singlePrice || 14.90).toFixed(2) + ')' + (eligibleInCart ? '' : ' (add a white mug to get it)') + '. ' + (dest.promo.freeShipping ? 'Free shipping!' : (dest.promo.extraPerMug > 0 ? 'Shipping: the normal rate, plus $' + dest.promo.extraPerMug.toFixed(2) + ' for each extra mug in your order.' : '')))
                     : '';
             }
             const sh = calcShipping(dest, totalCount);
@@ -3704,9 +3773,9 @@
             const promoNote = document.getElementById('designPromoNote');
             if (promoNote) {
                 const promoCountries = (storeState.destinations || []).filter(promoOf).map(d => d.name);
-                const show = !!col && promoCountries.length > 0 && variantPromoEligible({ name: col.name });
+                const show = !!col && designSize !== '15' && promoCountries.length > 0 && variantPromoEligible({ name: col.name });
                 promoNote.classList.toggle('hidden', !show);
-                if (show) promoNote.textContent = '⭐ ' + col.name + ' mugs: ' + storeState.whitePromo.percent + '% off when you buy 2 or more (a single one is $' + Number(storeState.whitePromo.singlePrice || 14.99).toFixed(2) + ') for ' + promoCountries.join(', ') + ' - applied at checkout when you choose that destination.';
+                if (show) promoNote.textContent = '⭐ ' + col.name + ' mugs: ' + storeState.whitePromo.percent + '% off when you buy 2 or more (a single one is $' + Number(storeState.whitePromo.singlePrice || 14.90).toFixed(2) + ') for ' + promoCountries.join(', ') + ' - applied at checkout when you choose that destination.';
             }
             const total = designerPrice(designSize);
             ['designAddPrice', 'previewAddPrice'].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = '$' + (total * designQty).toFixed(2); });
@@ -4529,6 +4598,7 @@
                     if (!res.ok || !Array.isArray(j) || j.length === 0) throw new Error('the server refused the change');
                     o.handled = newVal;
                     o.handledAt = at;
+                    if (newVal) autoSendApprovedEmail(o);
                     renderAdminOrders();
                     updateOrdersBadge();
                 })).catch(err => alert('Could not update the order: ' + ((err && err.message) || err)));
@@ -4540,6 +4610,7 @@
             order.handled = !order.handled;
             order.handledAt = order.handled ? new Date().toISOString() : null;
             saveOrders(orders);
+            if (order.handled) autoSendApprovedEmail(order);
             renderAdminOrders();
         }
 
@@ -4696,6 +4767,7 @@
                         '<p class="font-bold">' + txLabel + '</p>' + txHtml + ppHtml +
                     '</div>' +
                     notifyHtml +
+                    orderEmailBoxHtml(o) +
                     '<div class="flex flex-wrap gap-2 pt-1">' +
                         '<button onclick="toggleOrderHandled(\'' + escapeHtml(o.id) + '\')" class="px-4 py-2 rounded-xl text-xs font-extrabold text-white ' + (o.handled ? 'bg-gray-500 hover:bg-gray-600' : 'bg-emerald-600 hover:bg-emerald-700') + '">' +
                             (o.handled ? '↩ Mark as NOT handled' : '✔ Mark as handled') + '</button>' +
@@ -4979,6 +5051,7 @@
                 setOrderNotify(order.id, 'skipped', '');
                 return Promise.resolve();
             }
+            sendCustomerConfirmation(order);
             const subject = 'New order ' + order.id + ' - ' + fmtMoney(order.totals.total) + ' (' + order.payment.method + ') - ' + order.customer.name;
             const message = buildOrderEmailText(order, dbSaved);
             const attempt = n => postOrderEmail(key, subject, message)
@@ -4989,6 +5062,205 @@
                     setOrderNotify(order.id, 'failed', String((err && err.message) || err));
                 });
             return attempt(1);
+        }
+
+
+        // ---- Emails to the customer from the Orders tab ----
+        var orderEmailDrafts = {}, orderEmailOpen = {};
+        function oeDraft(id, field, val) { (orderEmailDrafts[id] = orderEmailDrafts[id] || {})[field] = val; }
+        function oeGet(id, field) { var d = orderEmailDrafts[id]; return (d && d[field] !== undefined) ? d[field] : ''; }
+        function oeSetStatus(id, msg, ok) {
+            var el = document.getElementById('oe_status_' + id);
+            if (el) { el.textContent = msg || ''; el.className = 'text-xs font-bold min-h-[1rem] ' + (ok ? 'text-emerald-700' : 'text-red-600'); }
+        }
+        function safeLink(u) {
+            u = String(u || '').trim(); if (!u) return '';
+            if (!/^https?:\/\//i.test(u)) u = 'https://' + u;
+            return /^https?:\/\/[^\s]+\.[^\s]+$/i.test(u) ? u : '';
+        }
+        function saveApprovedEmailToggle() {
+            var ae = document.getElementById('adminApprovedEmail');
+            storeState.approvedEmailOff = !(ae && ae.checked);
+            saveStoreState(storeState);
+        }
+        function buildOrderUpdateEmail(o, f) {
+            var c = o.customer || {}, t = o.totals || {};
+            var first = String(c.name || '').trim().split(/\s+/)[0] || 'there';
+            var L = ['Hello ' + first + ','];
+            var msg = String(f.message || '').trim();
+            if (msg) L.push('', msg);
+            var tn = String(f.tracking || '').trim();
+            if (tn) L.push('', 'Tracking number: ' + tn);
+            var url = safeLink(f.url);
+            if (url) L.push('', (String(f.linkText || '').trim() || 'Link') + ': ' + url);
+            L.push('', '---', 'Order ' + o.id);
+            (o.items || []).forEach(function (i) { L.push(i.quantity + 'x ' + i.title + ' (' + i.variant + (i.size ? ' · ' + i.size : '') + ')'); });
+            L.push('Total: ' + fmtMoney(t.total), '', 'Thank you for shopping with ' + storeBrandPlain() + '.');
+            var ce = (storeState.texts && storeState.texts.contactEmail) || '';
+            if (ce) L.push('Questions? Contact us at ' + ce + ' and mention your order number.');
+            return { subject: String(f.subject || '').trim() || ('An update about your order ' + o.id), text: L.join('\n') };
+        }
+        function sendRawCustomerEmail(o, subject, text) {
+            var key = (storeState.orderNotifyKey || '').trim();
+            var em = String((o.customer && o.customer.email) || '').trim();
+            if (!key) return Promise.reject(new Error('Add your Web3Forms Access Key in the Publish tab first.'));
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) return Promise.reject(new Error('This order has no valid customer email.'));
+            return fetch(ORDER_EMAIL_ENDPOINT, {
+                method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({ access_key: key, email: em, name: String((o.customer && o.customer.name) || ''), subject: subject, from_name: storeBrandPlain(), message: text }),
+                keepalive: true
+            }).then(function (res) { return res.json().catch(function () { return {}; }).then(function (j) {
+                if (!(res.ok && j.success)) throw new Error(j.message || ('HTTP ' + res.status));
+                return j;
+            }); });
+        }
+        function persistOrderEmailLog(o) {
+            if (SERVER_MODE) {
+                var d = JSON.parse(JSON.stringify(o)); delete d.handled; delete d.handledAt;
+                return sbAuthedFetch('/rest/v1/orders?id=eq.' + encodeURIComponent(o.id) + '&select=id', {
+                    method: 'PATCH', headers: { 'Content-Type': 'application/json', Prefer: 'return=representation' },
+                    body: JSON.stringify({ data: d })
+                }).then(function (res) { return res.json().catch(function () { return null; }).then(function (j) {
+                    if (!res.ok || !Array.isArray(j) || !j.length) throw new Error('the server refused the change');
+                }); });
+            }
+            var orders = getOrders(), x = orders.find(function (q) { return q.id === o.id; });
+            if (x) { x.emailLog = o.emailLog; saveOrders(orders); }
+            return Promise.resolve();
+        }
+        function addOrderEmailLog(o, entry) {
+            o.emailLog = (o.emailLog || []).concat([entry]);
+            return persistOrderEmailLog(o).catch(function (e) { console.error('Could not save the email log:', e); });
+        }
+        function autoSendApprovedEmail(o) {
+            if (storeState.approvedEmailOff === true) return;
+            if ((o.emailLog || []).some(function (e) { return e.kind === 'approved' && e.ok; })) return;
+            if (!(storeState.orderNotifyKey || '').trim()) return;
+            var subject = 'Your order ' + o.id + ' is confirmed - ' + storeBrandPlain();
+            sendRawCustomerEmail(o, subject, buildCustomerEmailText(o, 'approved'))
+                .then(function () { return addOrderEmailLog(o, { at: new Date().toISOString(), kind: 'approved', subject: subject, ok: true }); })
+                .catch(function (err) { return addOrderEmailLog(o, { at: new Date().toISOString(), kind: 'approved', subject: subject, ok: false, error: String((err && err.message) || err) }); })
+                .then(function () { renderAdminOrders(); });
+        }
+        function oeFields(id) {
+            return { subject: oeGet(id, 'subject'), message: oeGet(id, 'message'), tracking: oeGet(id, 'tracking'), url: oeGet(id, 'url'), linkText: oeGet(id, 'linkText') };
+        }
+        function oeCheck(id) {
+            var f = oeFields(id);
+            if (!String(f.message).trim() && !String(f.tracking).trim() && !String(f.url).trim()) { oeSetStatus(id, 'Write a message, a tracking number or a link first.', false); return null; }
+            if (String(f.url).trim() && !safeLink(f.url)) { oeSetStatus(id, 'The link does not look valid (example: https://tracking.example.com/123).', false); return null; }
+            return f;
+        }
+        function sendOrderEmail(id) {
+            var o = getAdminOrders().find(function (x) { return x.id === id; }); if (!o) return;
+            var f = oeCheck(id); if (!f) return;
+            var mail = buildOrderUpdateEmail(o, f);
+            oeSetStatus(id, 'Sending...', true);
+            sendRawCustomerEmail(o, mail.subject, mail.text)
+                .then(function () { return addOrderEmailLog(o, { at: new Date().toISOString(), kind: 'update', subject: mail.subject, ok: true }); })
+                .then(function () { orderEmailDrafts[id] = {}; renderAdminOrders(); oeSetStatus(id, '✓ Sent to ' + ((o.customer && o.customer.email) || 'the customer'), true); })
+                .catch(function (err) { oeSetStatus(id, 'Could not send: ' + ((err && err.message) || err), false); });
+        }
+        function oeComposeLinks(id) {
+            var o = getAdminOrders().find(function (x) { return x.id === id; }); if (!o) return null;
+            var f = oeCheck(id); if (!f) return null;
+            var mail = buildOrderUpdateEmail(o, f);
+            return { to: String((o.customer && o.customer.email) || ''), su: mail.subject, body: mail.text };
+        }
+        function openOrderEmailInGmail(id) {
+            var m = oeComposeLinks(id); if (!m) return;
+            window.open('https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(m.to) + '&su=' + encodeURIComponent(m.su) + '&body=' + encodeURIComponent(m.body), '_blank');
+        }
+        function openOrderEmailInApp(id) {
+            var m = oeComposeLinks(id); if (!m) return;
+            window.location.href = 'mailto:' + encodeURIComponent(m.to).replace(/%40/g, '@') + '?subject=' + encodeURIComponent(m.su) + '&body=' + encodeURIComponent(m.body);
+        }
+        function orderEmailBoxHtml(o) {
+            var id = o.id, e = escapeHtml, d = orderEmailDrafts[id] || {};
+            var has = !!(d.message || d.tracking || d.url || d.linkText || d.subject);
+            var inp = 'w-full px-3 py-2 rounded-lg border border-gray-300 text-xs bg-white';
+            var log = (o.emailLog || []).slice().reverse().map(function (x) {
+                return '<li>' + (x.ok ? '✅' : '⚠️') + ' ' + e(new Date(x.at).toLocaleString()) + ' - ' + (x.kind === 'approved' ? 'Order confirmed email' : 'Message') + ': ' + e(x.subject || '') + (x.ok ? '' : ' <span class="text-red-600">(failed: ' + e(x.error || '') + ')</span>') + '</li>';
+            }).join('');
+            return '<details class="rounded-2xl border border-red-200 bg-white p-4"' + ((has || orderEmailOpen[id]) ? ' open' : '') + ' ontoggle="orderEmailOpen[\'' + e(id) + '\']=this.open">' +
+                '<summary class="cursor-pointer text-xs font-extrabold text-red-800">✉️ Email the customer about this order' + ((o.emailLog || []).length ? ' (' + o.emailLog.length + ' sent)' : '') + '</summary>' +
+                '<div class="mt-3 space-y-2">' +
+                    '<p class="text-[11px] text-gray-500">To: <b>' + e((o.customer && o.customer.email) || '') + '</b></p>' +
+                    '<input type="text" class="' + inp + '" placeholder="Subject (optional)" value="' + e(d.subject || '') + '" oninput="oeDraft(\'' + e(id) + '\',\'subject\',this.value)">' +
+                    '<textarea rows="4" class="' + inp + '" placeholder="Your message to the customer, notes, anything you want to add..." oninput="oeDraft(\'' + e(id) + '\',\'message\',this.value)">' + e(d.message || '') + '</textarea>' +
+                    '<input type="text" class="' + inp + '" placeholder="Tracking number (optional)" value="' + e(d.tracking || '') + '" oninput="oeDraft(\'' + e(id) + '\',\'tracking\',this.value)">' +
+                    '<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">' +
+                        '<input type="text" class="' + inp + '" placeholder="Link, for example a tracking page (optional)" value="' + e(d.url || '') + '" oninput="oeDraft(\'' + e(id) + '\',\'url\',this.value)">' +
+                        '<input type="text" class="' + inp + '" placeholder="Text for the link, e.g. Track your package" value="' + e(d.linkText || '') + '" oninput="oeDraft(\'' + e(id) + '\',\'linkText\',this.value)">' +
+                    '</div>' +
+                    '<div class="flex flex-wrap gap-2 pt-1">' +
+                        '<button onclick="sendOrderEmail(\'' + e(id) + '\')" class="px-4 py-2 rounded-xl text-xs font-extrabold text-white bg-red-600 hover:bg-red-700">📨 Send to customer</button>' +
+                        '<button onclick="openOrderEmailInGmail(\'' + e(id) + '\')" class="px-4 py-2 rounded-xl text-xs font-bold text-gray-800 bg-gray-100 hover:bg-gray-200 border border-gray-300">Open in Gmail</button>' +
+                        '<button onclick="openOrderEmailInApp(\'' + e(id) + '\')" class="px-4 py-2 rounded-xl text-xs font-bold text-gray-800 bg-gray-100 hover:bg-gray-200 border border-gray-300">Open in my email app</button>' +
+                    '</div>' +
+                    '<p id="oe_status_' + e(id) + '" class="text-xs font-bold min-h-[1rem]"></p>' +
+                    '<p class="text-[11px] text-gray-500">"Send to customer" uses Web3Forms and needs the <b>Pro plan with Autoresponder</b>. "Open in Gmail" and "Open in my email app" work on any plan: they open a ready email that you send yourself.</p>' +
+                    (log ? '<ul class="text-[11px] text-gray-600 space-y-1 pt-1 border-t border-gray-100">' + log + '</ul>' : '') +
+                '</div></details>';
+        }
+
+        function saveCustomerEmailToggle() {
+            const ce = document.getElementById('adminCustomerEmail');
+            storeState.customerEmailOff = !(ce && ce.checked);
+            saveStoreState(storeState);
+        }
+
+        // ---- Confirmation email to the customer (Web3Forms Autoresponder sends it to the "email" field) ----
+        function storeBrandPlain() {
+            try { return String((storeState.texts && storeState.texts.brandName) || 'Our Store').replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim() || 'Our Store'; } catch (e) { return 'Our Store'; }
+        }
+        function buildCustomerEmailText(o, kind) {
+            const c = o.customer || {}, t = o.totals || {}, pay = o.payment || {}, pp = pay.paypal;
+            const first = String(c.name || '').trim().split(/\s+/)[0] || 'there';
+            const L = [];
+            if (kind === 'approved') L.push('Good news, ' + first + '! Your order has been confirmed and approved. ✅', 'We are now preparing it for you. Your order details are below.', '');
+            else L.push('Thank you for your order, ' + first + '!', 'We received it and will start working on it right away.', '');
+            L.push('ORDER ' + o.id, 'Placed: ' + new Date(o.createdAt).toLocaleString(), '');
+            L.push('ITEMS');
+            (o.items || []).forEach(i => {
+                L.push(i.quantity + 'x ' + i.title + ' (' + i.variant + (i.size ? ' · ' + i.size : '') + ') - ' + fmtMoney(Number(i.unitPrice) * Number(i.quantity)));
+                if (i.custom) L.push('   Your own design - we will print it exactly as you placed it.');
+            });
+            L.push('');
+            if (Number(t.promoDiscount) > 0) L.push((t.promoSingle ? 'White mug single price' : 'White mug promo (' + Number(t.promoPercent || 0) + '% off)') + ': -' + fmtMoney(t.promoDiscount));
+            if (Number(t.discount) - Number(t.promoDiscount || 0) > 0.004) L.push('Bulk discount: -' + fmtMoney(Number(t.discount) - Number(t.promoDiscount || 0)));
+            L.push('Shipping: ' + fmtMoney(t.shipping) + (t.shippingNote ? ' (' + t.shippingNote + ')' : ''));
+            if (Number(t.donation) > 0) L.push('Donation: ' + fmtMoney(t.donation));
+            L.push('TOTAL: ' + fmtMoney(t.total), '');
+            L.push('PAYMENT', 'Paid with: ' + (pay.method || '') + (pay.network ? ' - ' + pay.network : ''));
+            if (pay.txId) L.push((pay.method === 'PayPal' ? 'PayPal Transaction ID: ' : 'Transaction ID: ') + pay.txId);
+            if (pp && pp.status) L.push('Payment status: ' + pp.status);
+            if (pay.method && pay.method !== 'PayPal') L.push('Crypto payments are confirmed by us after the transfer is verified.');
+            L.push('', 'YOUR DETAILS', 'Name: ' + (c.name || ''), 'Email: ' + (c.email || ''), 'Phone: ' + (c.phone || '-'));
+            L.push('Ship to: ' + [c.street, [c.city, c.state].filter(Boolean).join(', ') + (c.zip ? ' ' + c.zip : ''), c.destination].filter(Boolean).join(', '));
+            if (c.fullAddress) L.push('Address note: ' + c.fullAddress);
+            L.push('', 'Printing and packing usually take 2-5 business days, then your order ships.');
+            const ce = (storeState.texts && storeState.texts.contactEmail) || '';
+            L.push('Questions? Contact us' + (ce ? ' at ' + ce : '') + ' and mention your order number.', '', 'Thank you for shopping with ' + storeBrandPlain() + '! 🎁');
+            return L.join('\n');
+        }
+        function sendCustomerConfirmation(order) {
+            try {
+                const key = (storeState.orderNotifyKey || '').trim();
+                const em = String((order.customer && order.customer.email) || '').trim();
+                if (!key || storeState.customerEmailOff === true || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) return Promise.resolve();
+                const body = {
+                    access_key: key, email: em, name: String(order.customer.name || ''),
+                    subject: 'Your order ' + order.id + ' is confirmed - ' + storeBrandPlain(),
+                    from_name: storeBrandPlain(), message: buildCustomerEmailText(order)
+                };
+                const send = n => fetch(ORDER_EMAIL_ENDPOINT, {
+                    method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(body), keepalive: true
+                }).then(r => r.json().catch(() => ({})).then(j => { if (!(r.ok && j.success)) throw new Error(j.message || ('HTTP ' + r.status)); }))
+                  .catch(err => { if (n < 2) return new Promise(r => setTimeout(r, 2000)).then(() => send(n + 1)); console.error('Customer email failed:', err); });
+                return send(1);
+            } catch (e) { console.error(e); return Promise.resolve(); }
         }
 
         function resendOrderEmail(id) {
@@ -5004,6 +5276,8 @@
         function renderPublishTab() {
             const el = document.getElementById('adminOrderNotifyKey');
             if (el) el.value = storeState.orderNotifyKey || '';
+            const ce = document.getElementById('adminCustomerEmail'); if (ce) ce.checked = storeState.customerEmailOff !== true;
+            const ae = document.getElementById('adminApprovedEmail'); if (ae) ae.checked = storeState.approvedEmailOff !== true;
             const srvBox = document.getElementById('publishServerBox');
             const expBox = document.getElementById('publishExportBox');
             const pwItem = document.getElementById('checklistPasswordItem');
@@ -5508,7 +5782,7 @@
             if (!kw) { alert('Please write the word that marks the white colors (for example: white).'); return; }
             const old = storeState.whitePromo || {};
             const sp = parseFloat(document.getElementById('whitePromoSingle').value);
-            if (!isFinite(sp) || sp <= 0) { alert('Please enter the price of a single white mug (for example 14.99).'); return; }
+            if (!isFinite(sp) || sp <= 0) { alert('Please enter the price of a single white mug (for example 14.90).'); return; }
             storeState.whitePromo = { percent: Math.round(pct * 100) / 100, keyword: kw.slice(0, 40), stackBulk: !!old.stackBulk, singlePrice: Math.round(sp * 100) / 100 };
             saveStoreState(storeState);
             alert('Saved.');
@@ -5516,7 +5790,7 @@
         function syncWhitePromoFields() {
             const w = storeState.whitePromo || { percent: 50, keyword: 'white' };
             const a = document.getElementById('whitePromoPercent'), k = document.getElementById('whitePromoKeyword');
-            const sg = document.getElementById('whitePromoSingle'); if (sg) sg.value = (w.singlePrice > 0 ? w.singlePrice : 14.99);
+            const sg = document.getElementById('whitePromoSingle'); if (sg) sg.value = (w.singlePrice > 0 ? w.singlePrice : 14.90);
             if (a) a.value = w.percent;
             if (k) k.value = w.keyword || 'white';
         }
@@ -6790,6 +7064,126 @@
         // Failsafe: never leave the page hidden, whatever happens
         setTimeout(function () { document.body.classList.remove('settings-loading'); }, 5000);
     </script>
+
+<script>
+/* Admin quality-of-life: every change is saved automatically; ESC or a click outside the panel closes the admin. */
+(function () {
+  try {
+    var modal = document.getElementById('adminModal');
+    if (!modal) return;
+    var SKIP_TABS = { ordersTab: 1, visitsTab: 1, securityTab: 1, addMugTab: 1 };
+    var queue = [], timer = null, lastTyped = 0;
+
+    var ind = document.createElement('div');
+    ind.id = 'autosaveIndicator';
+    ind.style.cssText = 'position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:95;padding:9px 18px;border-radius:999px;font:700 13px system-ui,sans-serif;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:opacity .25s;max-width:92vw;text-align:center';
+    document.body.appendChild(ind);
+    var hideT = null;
+    function show(msg, ok) {
+      ind.textContent = msg; ind.style.background = ok ? '#059669' : '#d97706'; ind.style.opacity = '1';
+      clearTimeout(hideT); hideT = setTimeout(function () { ind.style.opacity = '0'; }, ok ? 1800 : 6000);
+    }
+
+    function buttonFor(field) {
+      var node = field.parentElement;
+      while (node && node !== modal) {
+        var btns = Array.prototype.slice.call(node.querySelectorAll('button[onclick^="save"]'));
+        if (btns.length) {
+          var after = btns.filter(function (b) { return field.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING; });
+          return after.length ? after[0] : btns[btns.length - 1];
+        }
+        node = node.parentElement;
+      }
+      return null;
+    }
+
+    function runSilently(btn) {
+      var a = window.alert, c = window.confirm, p = window.prompt, msgs = [];
+      window.alert = function (m) { msgs.push(String(m)); };
+      window.confirm = function () { return false; };
+      window.prompt = function () { return null; };
+      try { btn.click(); } catch (e) { msgs.push('Error: ' + e.message); }
+      finally { window.alert = a; window.confirm = c; window.prompt = p; }
+      return msgs;
+    }
+
+    function runQueue() {
+      timer = null;
+      if (!queue.length) return;
+      var btns = queue.slice(); queue = [];
+      var ae = document.activeElement, aeId = ae && ae.id, selS = null, selE = null;
+      try { selS = ae.selectionStart; selE = ae.selectionEnd; } catch (e) {}
+      var problems = [];
+      btns.forEach(function (b) {
+        if (!document.body.contains(b)) return;
+        runSilently(b).forEach(function (m) {
+          if (!/success|saved|updated|reset/i.test(m) || /not saved|nothing was saved/i.test(m)) problems.push(m);
+        });
+      });
+      if (aeId && document.activeElement !== ae) {
+        var again = document.getElementById(aeId);
+        if (again && again.focus) { again.focus(); try { again.setSelectionRange(selS, selE); } catch (e) {} }
+      }
+      if (problems.length) show('⚠ Not saved: ' + problems[0], false);
+      else show('✓ Saved automatically', true);
+    }
+
+    function schedule(immediate) {
+      clearTimeout(timer);
+      if (immediate) { runQueue(); return; }
+      var wait = Math.max(350, 900 - (Date.now() - lastTyped));
+      timer = setTimeout(runQueue, wait);
+    }
+
+    modal.addEventListener('input', function () { lastTyped = Date.now(); }, true);
+    modal.addEventListener('change', function (e) {
+      var f = e.target;
+      if (!f || !f.closest) return;
+      if (f.type === 'file' || f.type === 'password' || f.type === 'button' || f.getAttribute('data-noautosave') !== null) return;
+      if (/^(mugFinderInput|showcaseMugSearch|newMugName|newMugPrice|newVariantName_.*)$/.test(f.id || '')) return;
+      var tab = f.closest('[id$="Tab"]');
+      if (tab && SKIP_TABS[tab.id]) return;
+      var b = buttonFor(f);
+      if (!b) return;
+      if (queue.indexOf(b) < 0) queue.push(b);
+      schedule(false);
+    }, true);
+
+    function flush() {
+      try { var ae = document.activeElement; if (ae && modal.contains(ae) && ae.blur) ae.blur(); } catch (e) {}
+      if (queue.length) schedule(true);
+    }
+    window.flushAdminAutosave = flush;
+
+    function overlayAbove() {
+      var ids = ['adminLoginModal', 'reviewModal', 'photoLightbox', 'calibModal', 'designPreviewModal', 'designUploadOverlay'];
+      for (var i = 0; i < ids.length; i++) {
+        var e = document.getElementById(ids[i]);
+        if (e && !e.classList.contains('hidden') && getComputedStyle(e).display !== 'none') return true;
+      }
+      return false;
+    }
+    function closeAdmin() {
+      if (modal.classList.contains('hidden')) return;
+      flush();
+      if (typeof toggleAdminModal === 'function') toggleAdminModal();   // same as the X button: closes, stays logged in
+    }
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape' || e.defaultPrevented) return;
+      if (modal.classList.contains('hidden') || overlayAbove()) return;
+      e.preventDefault(); closeAdmin();
+    });
+    var downOnBackdrop = false;
+    modal.addEventListener('mousedown', function (e) { downOnBackdrop = (e.target === modal); });
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal && downOnBackdrop) closeAdmin();
+      downOnBackdrop = false;
+    });
+    var x = modal.querySelector('button[onclick="toggleAdminModal()"]');
+    if (x) x.title = 'Close (Esc)';
+  } catch (err) { console.error('admin autosave init failed', err); }
+})();
+</script>
 
 <canvas id="xmasSnow" aria-hidden="true"></canvas>
 <script>
